@@ -3,10 +3,10 @@
 ![](output.png)
 
 ## Overview
-This Streamlit application allows users to interact with multiple document types (PDF, DOCX, TXT) using AI-powered conversational capabilities. The app extracts text from uploaded documents, processes them into vector embeddings, and enables users to ask questions, receiving context-aware responses.
+This Streamlit application allows users to interact with multiple document types (PDF, DOCX) using AI-powered conversational capabilities. The app extracts text from uploaded documents, processes them into vector embeddings, and enables users to ask questions, receiving context-aware responses.
 
 ## Features
-- **Upload and Process Multiple Documents**: Supports PDF, DOCX, and TXT files.
+- **Upload and Process Multiple Documents**: Supports PDF, DOCX files.
 - **Persistent Storage**: Uploaded documents are stored locally for processing.
 - **AI-Powered Q&A**: Uses Google Gemini API and FAISS vector store for intelligent document search and response generation.
 - **Interactive Chat Interface**: Users can ask questions and receive AI-generated responses based on document content.
@@ -38,7 +38,7 @@ Ensure you have Python installed along with the required dependencies.
    ```sh
    streamlit run app.py
    ```
-2. Upload your documents (PDF, DOCX, TXT) using the sidebar.
+2. Upload your documents (PDF, DOCX) using the sidebar.
 3. Click **Process Documents** to extract and store text in the vector database.
 4. Ask questions in the chat interface and receive AI-generated responses.
 5. Click **Submit Question** to process your input.
@@ -49,11 +49,6 @@ Ensure you have Python installed along with the required dependencies.
 - **FAISS**: Efficient similarity search for document embeddings.
 - **PyPDF2**: PDF text extraction.
 - **python-docx**: DOCX text extraction.
-
-## Future Enhancements
-- Add support for more document formats (e.g., Excel, HTML).
-- Improve response generation with advanced fine-tuned models.
-- Implement cloud storage for uploaded files.
 
 ## License
 This project is licensed under the MIT License.

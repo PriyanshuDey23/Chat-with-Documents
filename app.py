@@ -39,9 +39,7 @@ def extract_docx_text(docx_file):
     doc = Document(docx_file)
     return "\n".join([para.text for para in doc.paragraphs])
 
-# Function to extract text from a TXT file
-def extract_txt_text(txt_file):
-    return txt_file.read().decode("utf-8")
+
 
 # Function to split text into chunks
 def get_text_chunks(text):
@@ -85,7 +83,7 @@ def main():
     # Sidebar for file upload
     with st.sidebar:
         st.header("📂 Upload Documents")
-        uploaded_files = st.file_uploader("Upload documents (PDF, DOCX, TXT)", type=["pdf", "docx", "txt"], accept_multiple_files=True)
+        uploaded_files = st.file_uploader("Upload documents (PDF, DOCX)", type=["pdf", "docx"], accept_multiple_files=True)
         
         if st.button("Process Documents"):
             if uploaded_files:
@@ -101,8 +99,7 @@ def main():
                             raw_text = extract_pdf_text(file_path)
                         elif uploaded_file.name.endswith(".docx"):
                             raw_text = extract_docx_text(file_path)
-                        elif uploaded_file.name.endswith(".txt"):
-                            raw_text = extract_txt_text(uploaded_file)
+                        
                         else:
                             continue
 
